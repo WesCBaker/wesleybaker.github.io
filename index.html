@@ -67,6 +67,9 @@
   .h-stats { display:flex; gap:48px; flex-wrap:wrap; padding-top:36px; border-top:1px solid #f0f0f0; }
   .sn { font-family:'Playfair Display',serif; font-size:36px; font-weight:400; color:#111; display:block; line-height:1; margin-bottom:5px; }
   .sl { font-size:12px; font-weight:500; color:#777; }
+  .hero-grid { display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: center; }
+  .hero-photo { width: 280px; height: 340px; object-fit: cover; object-position: top; display: block; }
+  @media(max-width:768px){ .hero-grid { grid-template-columns: 1fr; } .hero-photo { display: none; } }
 
   /* SECTION PIECES */
   .sec { padding: 92px 0; }
@@ -319,6 +322,8 @@
 <!HERO>
 <section id="hero">
   <div class="wrap">
+  <div class="hero-grid">
+  <div>
     <p class="h-label f">Business Analytics &middot; Eller College of Management &middot; University of Arizona</p>
     <h1 class="h-name f d2">Wes Baker</h1>
     <p class="h-sub f d2">
@@ -337,6 +342,8 @@
       <div><span class="sn">2</span><span class="sl">Technical internships</span></div>
       <div><span class="sn">R, SQL, C++</span><span class="sl">Core technical stack</span></div>
     </div>
+  </div>
+  <img src="./headshot.jpg" alt="Wes Baker" class="hero-photo">
   </div>
 </section>
 <hr class="div">
@@ -767,14 +774,13 @@
         <h2 class="ch2">Get in touch.</h2>
         <p class="cp">Looking for conversations with teams building in fintech, automation, and analytics. If you need someone who operates independently and figures things out &mdash; reach out.</p>
         <div class="clinks">
-          <a class="clink" href="mailto:wesleybaker@arizona.edu"><div class="cdot"></div>wcbak@arizona.edu</a>
+          <a class="clink" href="mailto:wesleybaker@arizona.edu"><div class="cdot"></div>wesleybaker@arizona.edu</a>
           <a class="clink" href="https://www.linkedin.com/in/wes-baker-26b423183" target="_blank"><div class="cdot"></div>linkedin.com/in/wes-baker-26b423183</a>
           <!-- REPLACE wesbaker with your actual GitHub username -->
           <a class="clink" href="https://github.com/wescbaker" target="_blank"><div class="cdot"></div>github.com/wescbaker</a>
         </div>
       </div>
-      <!-- REPLACE YOUR_FORMSPREE_ID after signing up free at formspree.io -->
-      <form class="f d2" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+         <form class="f d2" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
         <div class="f2r">
           <input type="text" name="name" placeholder="Name" required>
           <input type="email" name="email" placeholder="Email" required>
